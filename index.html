@@ -8,12 +8,90 @@
 </head>
 <body>
     <a href="#contenido">Saltar contenido</a>
-     <header class="site-header">
-        <div>
-            <h1>HTML</h1>
-        </div>
+   <header class="site-header">
+    <div class="container">
+      <h1>HTML Showcase</h1>
+      <p class="subtitle">
+        Un muestrario de etiquetas HTML + un CSS que no da pena 😌
+      </p>
 
-     </header>
+      <nav aria-label="Navegación principal">
+        <ul class="nav">
+          <li><a href="#texto">Texto</a></li>
+          <li><a href="#listas">Listas</a></li>
+          <li><a href="#multimedia">Multimedia</a></li>
+          <li><a href="#tablas">Tablas</a></li>
+          <li><a href="#formularios">Formularios</a></li>
+          <li><a href="#semantica">Semántica</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="container" id="contenido"></main>
+  <section class="card" id="texto">
+      <h2>1) Texto y estructura</h2>
+
+      <article>
+        <h3>Encabezados</h3>
+        <p>Esto es un párrafo con <strong>strong</strong>, <em>em</em>, <mark>mark</mark>, <u>u</u> y <code>code</code>.</p>
+
+        <p>
+          Un enlace: <a href="https://developer.mozilla.org/es/" target="_blank" rel="noopener">MDN Web Docs</a>.
+          Un <abbr title="HyperText Markup Language">HTML</abbr> bien usado es oro.
+        </p>
+
+        <blockquote cite="https://developer.mozilla.org/">
+          “La web se construye mejor cuando el HTML tiene significado.”
+        </blockquote>
+
+        <p>
+          Texto pequeño: <small>esto es una nota al pie mental.</small>
+        </p>
+
+        <p>
+          Superíndice y subíndice: H<sub>2</sub>O y 2<sup>10</sup>.
+        </p>
+
+        <hr />
+
+        <h3>Detalles expandibles</h3>
+        <details>
+          <summary>Abre para ver un tip</summary>
+          <p>Usa etiquetas semánticas: <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;footer&gt;</code>… tu yo del futuro te lo agradece.</p>
+        </details>
+
+        <h3>Preformateado</h3>
+        <pre><code>function holaMundo() {
+  console.log("Hola, GitHub!");
+}</code></pre>
+      </article>
+    </section class="card" id="listas">
+    <h2>2)Listas</h2>
+    <divc class="grid">
+        <h3>Listas no ordenadas</h3>
+        <ul>
+            <li>Pan</li>
+            <li>Cáfe</li>
+            <li>Leche</li>
+            <li>Queso</li>
+            <li>Chocolate</li>
+        </ul>
+    </div>
+    <div>
+        <h3>Listas ordenadas</h3>
+        <ol>
+            <li>Pan</li>
+            <li>Cáfe</li>
+            <li>Leche</li>
+            <li>Queso</li>
+            <li>Chocolate</li>
+        </ol>
     
+    </div>
+    <section>
+<section class="card" id="multimedia"></section>
+<h2>3) Multimedia</h2>
+<img src="https://i.pinimg.com/736x/bc/87/33/bc8733fb65d84a0559c16537c9d51842.jpg" alt="Totoro" loading="lazy">
+    <main>
 </body>
 </html>
