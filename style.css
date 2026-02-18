@@ -1,170 +1,189 @@
-:root{
+:root {
     --bg: #c780df;
     --card: #2780f5;
     --text: #FFF9F7;
-    --muted:#3323c0;
+    --muted: #3323c0;
     --border: rgba(255,255,255,.12);
     --radius: 16px;
-}
-    *{ box-sizing: border-box; }
-html, body{ height: 100%; }
-body{
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 600px at 20% 10%, rgba(124,77,255,.25), transparent),
-              radial-gradient(900px 500px at 90% 0%, rgba(0,200,255,.18), transparent),
-              var(--bg);
-  color: var(--text);
-  line-height: 1.5;
-}
-/* 3) Utilidades */
-.container{
-  width: min(1050px, 92%);
-  margin: 0 auto;
-}
-.skip-link{
-  position: absolute;
-  left: -999px;
-  top: 10px;
-  background: white;
-  color: black;
-  padding: 8px 10px;
-  border-radius: 10px;
-}
-.skip-link:focus{ left: 10px; }
-
-a{ color: inherit; }
-code{
-  background: rgba(255,255,255,.08);
-  padding: 2px 6px;
-  border-radius: 8px;
-}
-/* 4) Header / Nav */
-.site-header{
-  padding: 36px 0 18px;
-  border-bottom: 1px solid var(--border);
-}
-.subtitle{ color: var(--muted); margin-top: 6px; }
-.nav{
-  list-style: none;
-  padding: 0;
-  margin: 18px 0 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.nav a{
-  text-decoration: none;
-  padding: 8px 12px;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  background: rgba(255,255,255,.04);
-}
-.nav a:hover{
-  transform: translateY(-1px);
-  background: rgba(255,255,255,.08);
+    --shadow: 0 8px 30px rgba(0,0,0,0.1);
 }
 
-/* 5) Cards */
-.card{
-  margin: 22px 0;
-  padding: 18px;
-  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-.grid{
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-}
-.mini{
-  padding: 12px;
-  border: 1px dashed var(--border);
-  border-radius: 14px;
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 20% 10%, rgba(124,77,255,.25), transparent),
+                radial-gradient(900px 500px at 90% 0%, rgba(0,200,255,.18), transparent),
+                var(--bg);
+    color: var(--text);
+    line-height: 1.5;
 }
 
-/* 6) Botones */
-.btn{
-  display: inline-block;
-  border: 1px solid transparent;
-  padding: 10px 14px;
-  border-radius: 12px;
-  background: rgba(124,77,255,.35);
-  text-decoration: none;
-  cursor: pointer;
-}
-.btn:hover{ filter: brightness(1.08); }
-.btn.ghost{
-  background: transparent;
-  border-color: var(--border);
+.container {
+    width: min(1050px, 92%);
+    margin: 0 auto;
 }
 
-/* 7) Imágenes, tablas, forms */
-figure{ margin: 0; }
-img{
-  width: 100%;
-  height: auto;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-}
-table{
-  width: 100%;
-  border-collapse: collapse;
-  overflow: hidden;
-  border-radius: 14px;
-  border: 1px solid var(--border);
-}
-caption{ color: var(--muted); padding: 10px; }
-th, td{
-  padding: 12px;
-  border-bottom: 1px solid var(--border);
-  text-align: left;
-}
-thead th{
-  background: rgba(255,255,255,.06);
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 10px;
+    background: white;
+    color: black;
+    padding: 8px 10px;
+    border-radius: 10px;
 }
 
-.form label{
-  display: grid;
-  gap: 6px;
-  margin: 10px 0;
-}
-input, select, textarea{
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background: rgba(0,0,0,.25);
-  color: var(--text);
-}
-.inline{
-  display: flex;
-  gap: 12px;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.actions{
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
+.skip-link:focus { left: 10px; }
+
+a { color: inherit; }
+
+code {
+    background: rgba(255,255,255,.08);
+    padding: 2px 6px;
+    border-radius: 8px;
 }
 
-/* 8) Footer */
-.site-footer{
-  margin-top: 30px;
-  padding: 18px 0;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
+.site-header {
+    padding: 36px 0 18px;
+    border-bottom: 1px solid var(--border);
 }
 
-/* 9) SVG */
-svg rect{
-  fill: rgba(255,255,255,.06);
-  stroke: rgba(255,255,255,.25);
-}
-svg text{
-  fill: var(--text);
-  font: 600 16px system-ui;
+.subtitle { color: var(--muted); margin-top: 6px; }
+
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 18px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
+.nav a {
+    text-decoration: none;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: rgba(255,255,255,.04);
+}
+
+.nav a:hover {
+    transform: translateY(-1px);
+    background: rgba(255,255,255,.08);
+}
+
+.card {
+    margin: 22px 0;
+    padding: 18px;
+    background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.mini {
+    padding: 12px;
+    border: 1px dashed var(--border);
+    border-radius: 14px;
+}
+
+.btn {
+    display: inline-block;
+    border: 1px solid transparent;
+    padding: 10px 14px;
+    border-radius: 12px;
+    background: rgba(124,77,255,.35);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn:hover { filter: brightness(1.08); }
+
+.btn.ghost {
+    background: transparent;
+    border-color: var(--border);
+}
+
+figure { margin: 0; }
+
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 14px;
+    border: 1px solid var(--border);
+}
+
+caption { color: var(--muted); padding: 10px; }
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+thead th {
+    background: rgba(255,255,255,.06);
+}
+
+.form label {
+    display: grid;
+    gap: 6px;
+    margin: 10px 0;
+}
+
+input, select, textarea {
+    padding: 10px 12px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,.25);
+    color: var(--text);
+    width: 100%;
+}
+
+.inline {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.site-footer {
+    margin-top: 30px;
+    padding: 18px 0;
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+}
+
+svg rect {
+    fill: rgba(255,255,255,.06);
+    stroke: rgba(255,255,255,.25);
+}
+
+svg text {
+    fill: var(--text);
+    font: 600 16px system-ui;
+}
